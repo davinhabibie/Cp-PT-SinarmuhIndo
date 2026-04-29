@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinar Muhindo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css?v=999">
+
+</head>
+
+
+
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+   Sinar Muhindo
+    <div class="loader-bar" id="loaderBar"></div>
+  </div>
+</div>
+
+
+
+<!-- NAV -->
+<nav id="navbar">
+ <div class="logo">
+  <a href="#home">
+  <img src="logosinarmuhindo.png" alt="Sinar Muhindo Logo">
+  </a>
+</div>
+  <ul class="nav-links">
+    <li><a href="#home">Beranda</a></li>
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#services">Layanan</a></li>
+    <li><a href="#projects">Proyek</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Konsultasi</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-label">PT Sinar Muhindo Konstruksi</div>
+    <h1 class="hero-title">
+      <span class="line"><span>Ruang yang</span></span>
+      <span class="line"><span><em>Bercerita</em></span></span>
+      <span class="line"><span>Tentang Anda</span></span>
+    </h1>
+    <p class="hero-sub">
+      Kami merancang lingkungan binaan yang melampaui fungsi — setiap garis, material,
+      dan cahaya dipilih dengan intensi untuk menciptakan pengalaman yang tak terlupakan.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Lihat Portofolio</button>
+      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Mulai Proyek <span>→</span></button>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <div class="img-placeholder img-p1">
+       <img src="herokanan.png" alt="Project 1" class="hero-png">
+      </div>
+      <div class="img-placeholder img-p2">
+         <img src="herokanan2.png" alt="Project 1" class="hero-png">
+      </div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">60+</div>
+      <div class="stat-label">Proyek Selesai</div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Arsitektur Residensial</span><span class="dot">·</span>
+    <span>Desain Komersial</span><span class="dot">·</span>
+    <span>Interior Design</span><span class="dot">·</span>
+    <span>Urban Planning</span><span class="dot">·</span>
+    <span>Renovasi</span><span class="dot">·</span>
+    <span>Konsultasi</span><span class="dot">·</span>
+    <span>Arsitektur Residensial</span><span class="dot">·</span>
+    <span>Desain Komersial</span><span class="dot">·</span>
+    <span>Interior Design</span><span class="dot">·</span>
+    <span>Urban Planning</span><span class="dot">·</span>
+    <span>Renovasi</span><span class="dot">·</span>
+    <span>Konsultasi</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="about">
+    <div>
+      <div class="section-label" data-reveal data-delay="1">Tentang Kami</div>
+      <h2 class="about-title" data-reveal data-delay="2">
+        Sinar Muhindo<br><em>Hadir</em> dengan meningkatkan Profesionalitas
+      </h2>
+      <p class="about-text" data-reveal data-delay="3">
+       <b> Sinar Muhindo</b> lahir dari  Perusahaan Amal Usaha Muhammadiyah (AUM) Jawa Tengah di bawah naungan Majelis Ekonomi dan Kewirausahaan (MEK). 
+      </p>
+      <p class="about-text" data-reveal data-delay="4">
+        Berlokasi di Semarang, kami telah menangani proyek dari Sabang hingga Merauke — dari villa tropis pribadi hingga gedung perkantoran modern yang ramah lingkungan.
+      </p>
+      <div class="stats-row">
+        <div class="stat-item" data-reveal data-delay="3"><div class="n">8</div><div class="l">Tahun Pengalaman</div></div>
+        <div class="stat-item" data-reveal data-delay="4"><div class="n">20</div><div class="l">Penghargaan</div></div>
+        <div class="stat-item" data-reveal data-delay="5"><div class="n">80</div><div class="l">Tenaga Ahli</div></div>
+      </div>
+    </div>
+   <div class="about-visual" data-reveal="right">
+  <div class="about-img-wrap">
+    
+    <div class="about-slider" id="aboutSlider">
+        <div class="about-slide">
+        <img src="assets/konstraktor1.jpg" alt="Project 1">
+        </div>
+      <div class="about-slide">
+        <img src="assets/konstraktor2.jpg" alt="Project 2">
+        </div>
+      <div class="about-slide">
+        <img src="assets/konstraktor3.jpg" alt="Project 3">
+       </div>
+    </div>
+
+    <button class="about-btn prev" id="prevBtn">&#10094;</button>
+    <button class="about-btn next" id="nextBtn">&#10095;</button>
+    
+    <div class="about-badge">
+        <div class="about-badge-num">2018</div>
+        <div class="about-badge-txt">Berdiri sejak</div>
+      </div>
+    
+  </div>
+</div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-head">
+    <div>
+      <div class="section-label" style="color:rgba(255,255,255,0.3);" data-reveal="fade">Layanan</div>
+      <h2 class="services-title" data-reveal data-delay="2">Apa yang Dapat<br>Kami <em>Wujudkan</em></h2>
+    </div>
+    <a href="#contact" class="services-link" data-reveal="fade" data-delay="2">Semua Layanan →</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card" data-reveal data-delay="1">
+      <div class="service-num">01</div><div class="service-icon"></div>
+      <div class="service-name">Arsitektur Residensial</div>
+      <div class="service-desc">Hunian pribadi yang mencerminkan karakter dan gaya hidup unik Anda — dari rumah tapak hingga vila eksklusif di penjuru nusantara.</div>
+    
+    </div>
+    <div class="service-card" data-reveal data-delay="2">
+      <div class="service-num">02</div><div class="service-icon"></div>
+      <div class="service-name">Desain Komersial</div>
+      <div class="service-desc">Ruang kerja, ritel, dan hospitality yang dirancang untuk produktivitas, branding, dan pengalaman pelanggan yang tak terlupakan.</div>
+      
+    </div>
+    <div class="service-card" data-reveal data-delay="3">
+      <div class="service-num">03</div><div class="service-icon"></div>
+      <div class="service-name">Interior Design</div>
+      <div class="service-desc">Detail interior yang harmonis — material, furnitur, pencahayaan, dan warna yang bekerja sebagai satu kesatuan yang indah.</div>
+     
+    </div>
+    <div class="service-card" data-reveal data-delay="4">
+      <div class="service-num">04</div><div class="service-icon"></div>
+      <div class="service-name">Renovasi & Restorasi</div>
+      <div class="service-desc">Merevitalisasi bangunan lama dengan nafas baru, menjaga karakter aslinya sambil menghadirkan kenyamanan modern.</div>
+      
+    </div>
+    <div class="service-card" data-reveal data-delay="5">
+      <div class="service-num">05</div><div class="service-icon"></div>
+      <div class="service-name">Urban & Landscape</div>
+      <div class="service-desc">Perencanaan kawasan dan desain lanskap yang menciptakan ruang publik hidup dan komunitas yang berkelanjutan.</div>
+  
+    </div>
+    <div class="service-card" data-reveal data-delay="6">
+      <div class="service-num">06</div><div class="service-icon"></div>
+      <div class="service-name">Konsultasi & BIM</div>
+      <div class="service-desc">Panduan strategis dari konsep awal hingga serah terima, didukung teknologi Building Information Modeling terkini.</div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->       
+<section class="section" id="projects">
+  <div class="projects-head">
+    <div>
+      <div class="section-label" data-reveal data-delay="1">Proyek Pilihan</div>
+      <h2 class="projects-title" data-reveal data-delay="2">Karya yang <em>Berbicara</em></h2>
+    </div>
+    
+  </div>
+  <div class="projects-grid">
+    <div class="project-card" data-reveal="left" data-delay="1">
+   <div class="project-img-wrap main">
+        <img src="assets/porpo1.jpg" alt="Villa Senja" class="project-img">
+        <div class="project-overlay"><div class="project-overlay-text">SinarMuhindo</div></div>
+      </div>
+      <div class="project-info">
+        <div class="project-tag">Public Space · 2018</div>
+        <div class="project-name">Villa Senja — Bali</div>
+        <div class="project-loc">Seminyak, Bali</div>
+      </div>
+    </div>
+
+    <div  class="project-side">
+      <div class="project-card" data-reveal data-delay="2">
+        <div class="project-img-wrap tall">
+          <img src="assets/porpo2.jpg" alt="Menara Angin" class="project-img">
+          <div class="project-overlay"><div class="project-overlay-text">SinarMuhindo</div></div>
+        </div>
+         
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Komersial · 2023</div>
+          <div class="project-name">Coffe Shop</div>
+          <div class="project-loc">Semarang, Jawa Tengah</div>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal data-delay="3">
+        <div class="project-img-wrap sq">
+          <img src="assets/porpo3.jpg" alt="Pavilion Budaya" class="project-img">
+          <div class="project-overlay"><div class="project-overlay-text">SinarMuhindo</div></div>
+        </div>
+      
+        </div>
+        <div class="project-info">
+          <div class="project-tag">Healtcare · 2023</div>
+          <div class="project-name">Dental Clinic</div>
+          <div class="project-loc">Yogyakarta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div>
+    <div class="section-label" data-reveal="fade">Klien Berkata</div>
+  </div>
+  <div data-reveal data-delay="2">
+    <blockquote class="testimonial-quote">
+      Sinar Muhindo mengubah sebidang tanah kosong menjadi rumah yang benar-benar terasa seperti milik kami. Mereka mendengar bukan hanya apa yang kami katakan, tapi apa yang kami maksud.
+    </blockquote>
+    <div class="testimonial-author">Budi & Ratna Santoso — Klien Residensial, Jakarta</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-eyebrow" data-reveal="fade">Mulai Perjalanan Anda</div>
+  <h2 class="cta-title" data-reveal data-delay="2">Siap Membangun<br><em>Ruang Impian</em> Anda?</h2>
+  <p class="cta-sub" data-reveal data-delay="3">
+    Konsultasi awal gratis. Ceritakan visi Anda kepada kami dan kami akan membantu mewujudkannya dengan pendekatan yang teliti dan personal.
+  </p>
+  <div class="cta-actions" data-reveal data-delay="4">
+
+  <a class="btn-primary"
+     href="https://wa.me/6285641706079?text=Halo%20Sinar%20Muhindo,%20saya%20ingin%20jadwalkan%20konsultasi."
+     target="_blank">
+     Jadwalkan Konsultasi
+  </a>
+
+  <a class="btn-ghost"
+     href="https://wa.me/6285641706079?text=Halo%20Sinar%20Muhindo,%20saya%20ingin%20bertanya%20lebih%20lanjut."
+     target="_blank">
+     Hubungi Kami <span>→</span>
+  </a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">SINAR MUHINDO</div>
+      <p class="footer-tagline">Firma arsitektur dan desain interior berbasis di Semarang. Melayani seluruh Indonesia sejak 2018.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Layanan</div>
+      <ul class="footer-links">
+        <li><a href="#">Arsitektur</a></li>
+        <li><a href="#">Interior</a></li>
+        <li><a href="#">Konsultasi</a></li>
+        <li><a href="#">Urban Design</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Perusahaan</div>
+      <ul class="footer-links">
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Tim</a></li>
+        <li><a href="#">Karir</a></li>
+        <li><a href="#">Jurnal</a></li>
+      </ul>
+    </div>
+ <div class="footer-maps-section">
+  <div class="footer-col-title">Lokasi</div>
+
+  <div class="footer-maps-content">
+    <!-- Maps -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.220739466469!2d110.413333!3d-7.008999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c1f5f2f5dcb%3A0x1234567890abcdef!2sJl.%20Singosari%20Raya%20No.33%2C%20Semarang!5e0!3m2!1sid!2sid!4v1710000000000"
+      width="180"
+      height="120"
+      style="border:0; border-radius:10px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <!-- Alamat -->
+    <div class="footer-address">
+      <p>
+        Jl. Singosari Raya No.33, Pleburan, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50241
+      </p>
+
+      <a class="footer-maps-link"
+        href="https://www.google.com/maps?q=Jl.+Singosari+Raya+No.33,+Semarang"
+        target="_blank">
+        Buka di Google Maps →
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Sinar Muhindo. Semua hak cipta dilindungi.</div>
+    <div class="footer-socials">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>x

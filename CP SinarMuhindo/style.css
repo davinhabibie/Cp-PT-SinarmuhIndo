@@ -200,6 +200,7 @@ nav {
   width: 100%;
   max-width: 650px; /* biar proporsional di kanan */
   margin-bottom: 1.5rem;
+  padding-top :1rem;
 }
 
 .hero-video-label {
@@ -268,7 +269,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 3rem;
+  
 }
 
 /* ===================== MARQUEE ===================== */
@@ -461,10 +462,11 @@ nav {
   background: #2C2A24;
 }
 .project-img-wrap {
-  position: relative;
+  height: 500px;
   overflow: hidden;
   background: #2C2A24; /* Latar belakang gelap jika gambar tidak memenuhi frame */
   border-radius: 8px 
+
 }
 .project-img {
 

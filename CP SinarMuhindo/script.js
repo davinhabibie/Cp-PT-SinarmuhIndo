@@ -54,10 +54,7 @@ const counterObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.stat-item .n').forEach(el => counterObserver.observe(el));
 
 /* ---- Parallax hero ---- */
-window.addEventListener('scroll', () => {
-  const hr = document.querySelector('.hero-right');
-  if (hr) hr.style.transform = `translateY(${window.scrollY * 0.12}px)`;
-}, { passive: true });
+
 
 const slider = document.getElementById('aboutSlider');
 const slides = document.querySelectorAll('.about-slide');
@@ -105,3 +102,11 @@ function resetTimer() {
 
 // Inisialisasi
 startTimer();
+
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active'); 
+});

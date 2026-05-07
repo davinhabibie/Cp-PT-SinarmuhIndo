@@ -14,8 +14,6 @@
 
 </head>
 
-
-
 <body>
 
 <!-- Loader -->
@@ -25,8 +23,6 @@
     <div class="loader-bar" id="loaderBar"></div>
   </div>
 </div>
-
-
 
 <!-- NAV -->
 <nav id="navbar">
@@ -43,6 +39,13 @@
     <li><a href="#contact">Kontak</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Konsultasi</a>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
 </nav>
 
 <!-- HERO -->
@@ -59,30 +62,27 @@
     </p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Lihat Portofolio</button>
-      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Mulai Proyek <span>→</span></button>
+      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Mulai Proyek </button>
     </div>
   </div>
 
   <div class="hero-right">
     <div class="hero-video-wrapper">
-      <div class="hero-video-label">🎬 Profil Perusahaan</div>
+      <div class="hero-video-label">Profil Perusahaan</div>
       <div class="hero-video-container">
+
       <iframe
         src="https://www.youtube.com/embed/purFesCZvEE"
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
       </iframe>
 
       </div>
     </div>
-
-  
-
   </div>
-
-
 </section>
 
 <!-- MARQUEE -->
@@ -354,8 +354,8 @@ Dengan pengalaman dalam pembangunan masjid, rumah sakit, serta berbagai proyek k
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Sinar Muhindo. Semua hak cipta dilindungi.</div>
     <div class="footer-socials">
-      <a href="#">Instagram</a>
-      <a href="#">Youtube</a>
+      <a href="https://www.instagram.com/sinarmuhindo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.youtube.com/@sinarmuhindokonstruksi" target="_blank" rel="noopener noreferrer">YouTube</a>
     
     </div>
   </div>

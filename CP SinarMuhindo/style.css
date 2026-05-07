@@ -67,24 +67,6 @@ nav {
   min-height: 80px; /* Sesuaikan dengan kenyamanan visual */
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.logo img {
-   /* GUNAKAN SKALA */
-  height: 120px; /* Berikan tinggi yang jauh lebih besar dari nav (misal 120px) */
-  width: auto;   /* Biar tidak gepeng */
-  
-  object-fit: contain;
-  transform: scale(1.2); /* Perbesar logo secara visual tanpa merusak layout */
-  transform-origin: left center; /* Biar membesarnya ke kanan & tengah */
-  
-  image-rendering: -webkit-optimize-contrast;
-}
-
 .nav-links {
   display: flex; gap: 1.5rem; list-style: none;
   opacity: 0; animation: fadeDown 0.8s var(--ease) 0.35s forwards;
@@ -109,21 +91,75 @@ nav {
 }
 .nav-cta:hover { background: var(--dark); color: var(--cream); }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--dark);
+  transition: 0.3s ease;
+}
+
+/* ===== ANIMASI JADI X TOGGLE ===== */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+   /* GUNAKAN SKALA */
+  height: 120px; /* Berikan tinggi yang jauh lebih besar dari nav (misal 120px) */
+  width: auto;   /* Biar tidak gepeng */
+  
+  object-fit: contain;
+  transform: scale(1.2); /* Perbesar logo secara visual tanpa merusak layout */
+  transform-origin: left center; /* Biar membesarnya ke kanan & tengah */
+  
+  image-rendering: -webkit-optimize-contrast;
+}
+
 /* ===================== HERO ===================== */
 .hero {
-  min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 1fr;
-  padding-top: 0; overflow: hidden;
-   align-items: center; 
+  min-height: auto;
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  padding:6rem 0 4rem; 
+  overflow: hidden;
+  align-items: center; 
+
+  
 }
 .hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 2rem 3rem; position: relative;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  padding: 1rem 3rem; 
+  position: relative;
 }
 .hero-label {
   font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -162,7 +198,7 @@ nav {
 /* === Hero Video === */
 .hero-video-wrapper {
   width: 100%;
-  max-width: 500px; /* biar proporsional di kanan */
+  max-width: 650px; /* biar proporsional di kanan */
   margin-bottom: 1.5rem;
 }
 
@@ -234,40 +270,6 @@ nav {
   align-items: center;
   padding-right: 3rem;
 }
-
-@keyframes revealDown { to { clip-path: inset(0% 0 0 0); } }
-
-
-@keyframes slideRight {
-  from { opacity: 0; transform: translateX(-30px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem; font-weight: 300; line-height: 1; color: var(--dark);
-}
-.stat-label {
-  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--mid); margin-top: 0.4rem;
-}
-
-.scroll-hint {
-  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  opacity: 0; animation: fadeUp 0.9s var(--ease) 2s forwards;
-}
-.scroll-hint span {
-  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid);
-}
-.scroll-line {
-  width: 0.5px; height: 3rem; background: var(--mid); position: relative; overflow: hidden;
-}
-.scroll-line::after {
-  content: ''; position: absolute; top: -100%;
-  width: 100%; height: 100%; background: var(--dark);
-  animation: scrollDrop 1.4s var(--ease) 2.2s infinite;
-}
-@keyframes scrollDrop { to { top: 200%; } }
 
 /* ===================== MARQUEE ===================== */
 .marquee-bar {
@@ -656,7 +658,7 @@ footer { background: var(--dark); color: var(--cream); padding: 5rem 3rem 2.5rem
     display: flex;
     flex-direction: column; /* Teks di atas, gambar di bawah */
     min-height: auto;
-    padding: 80px 0 40px 0; /* Beri ruang untuk Navbar fixed */
+    padding: 80px 0 20px 0; /* Beri ruang untuk Navbar fixed */
     gap: 2rem;
   }
 
@@ -724,14 +726,6 @@ footer { background: var(--dark); color: var(--cream); padding: 5rem 3rem 2.5rem
   .stat-num {
     font-size: 2rem;
   }
-  
-  nav {
-   display: flex;
-    align-items: center;
-    justify-content: space-between; /* Logo kiri, Nav tengah, CTA kanan */
-    padding: 1rem 0.25rem;
-    gap: 20px;
-  }
 
   .logo {
     flex: 0 0 auto; /* Mencegah logo gepeng */
@@ -739,15 +733,43 @@ footer { background: var(--dark); color: var(--cream); padding: 5rem 3rem 2.5rem
     margin-left: 0;
   }
 
+ .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+   display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo kiri, Nav tengah, CTA kanan */
+    padding: 1rem 1rem;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
   .nav-links {
-    display: flex; /* Munculkan kembali */
-    flex: 1; /* Mengambil ruang tengah */
-    overflow-x: auto; /* Aktifkan scroll horizontal */
-    white-space: nowrap; /* Mencegah menu turun ke bawah */
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    background: white;
+
+    flex-direction: column;
+    align-items: center;
+
     gap: 1.5rem;
-    padding: 0 10px;
-    -webkit-overflow-scrolling: touch; /* Scroll lebih halus di iOS */
-    scrollbar-width: none; 
+    padding: 2rem 0;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-links::-webkit-scrollbar {
@@ -759,9 +781,7 @@ footer { background: var(--dark); color: var(--cream); padding: 5rem 3rem 2.5rem
   }
 
   .nav-cta {
-    flex: 0 0 auto; /* Mencegah tombol gepeng */
-    font-size: 0.65rem;
-    padding: 0.5rem 1rem;
+     display: none;
   }
 
 /* Container Utama untuk menyejajarkan maps & teks */
